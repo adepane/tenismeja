@@ -1,0 +1,50 @@
+{
+	"moduleName": "Roles",
+	"tag": "Manages Permission Module",
+	"moduleSlug": "module",
+	"subMenu": {
+		"module": {
+			"name": "List Modules",
+			"classIcon": "far fa-list-alt",
+			"classLink": "ajax-load",
+			"hidden": false,
+			"main": true
+		}
+	},
+	"action": {
+		"getdirectory": {
+			"name": "Get Directory",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"sendrole": {
+			"name": "Send Role",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"vrole_profile": {
+			"name": "Role Profile",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"getprofilesdata": {
+			"name": "Get Profile Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		}
+	},
+	"sub": "setting",
+	"order": 3
+}

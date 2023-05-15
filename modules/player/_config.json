@@ -1,0 +1,64 @@
+{
+	"moduleName": "Players",
+	"tag": "player",
+	"moduleSlug": "player",
+	"subMenu": {
+		"player": {
+			"name": "List",
+			"classIcon": "fa fa-bars",
+			"classLink": "player ajax-load",
+			"hidden": false,
+			"main": true
+		},
+		"addPlayer": {
+			"name": "Create",
+			"classIcon": "fa fa-user",
+			"classLink": "addplayer",
+			"hidden": false,
+			"main": false
+		},
+		"editPlayer": {
+			"name": "Edit Player",
+			"classIcon": "fa fa-user",
+			"classLink": "editplayer",
+			"hidden": true,
+			"main": false
+		}
+	},
+	"action": {
+		"getPlayerData": {
+			"name": "Get Player Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"addPlayerData": {
+			"name": "Add Player Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"editPlayerData": {
+			"name": "Edit Player Data",
+			"action": true,
+			"page": "#editplayer",
+			"type": "btn",
+			"aClass": "editplayer",
+			"iClass": "fas fa-pen"
+		},
+		"deletePlayerData": {
+			"name": "Delete Player Data",
+			"action": true,
+			"page": "#deleteplayer",
+			"type": "btn",
+			"aClass": "deleteplayer",
+			"iClass": "fas fa-trash"
+		}
+	},
+	"sub": "",
+	"order": null
+}

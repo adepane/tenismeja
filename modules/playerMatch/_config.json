@@ -1,0 +1,96 @@
+{
+	"moduleName": "Player Match",
+	"tag": "PlayerMatch",
+	"moduleSlug": "PlayerMatch",
+	"subMenu": {
+		"playerMatch": {
+			"name": "List",
+			"classIcon": "fa fa-bars",
+			"classLink": "PlayerMatch ajax-load",
+			"hidden": false,
+			"main": true
+		},
+		"addPlayerMatch": {
+			"name": "Create",
+			"classIcon": "fa fa-user",
+			"classLink": "addPlayerMatch",
+			"hidden": false,
+			"main": false
+		},
+		"editPlayerMatch": {
+			"name": "Edit PlayerMatch",
+			"classIcon": "fa fa-user",
+			"classLink": "editPlayerMatch",
+			"hidden": true,
+			"main": false
+		},
+		"startPlayerMatch": {
+			"name": "Start PlayerMatch",
+			"classIcon": "fa fa-user",
+			"classLink": "startPlayerMatch",
+			"hidden": true,
+			"main": false
+		}
+		
+	},
+	"action": {
+		"getPlayerMatchData": {
+			"name": "Get Player Match Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"getPlayerMatchStatus": {
+			"name": "Get Player Match Status",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"addPlayerMatchData": {
+			"name": "Add Player Match Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"addPlayerMatchSetdata": {
+			"name": "Add Player Match Set Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"startPlayerMatchData": {
+			"name": "Start",
+			"action": true,
+			"page": "startPlayerMatch",
+			"type": "btn",
+			"aClass": "startPlayerMatch",
+			"iClass": "fas fa-play"
+		},
+		"editPlayerMatchData": {
+			"name": "Edit",
+			"action": true,
+			"page": "#editPlayerMatch",
+			"type": "btn",
+			"aClass": "editPlayerMatch",
+			"iClass": "fas fa-pen"
+		},
+		"deletePlayerMatchData": {
+			"name": "Delete",
+			"action": true,
+			"page": "#deletePlayerMatch",
+			"type": "btn",
+			"aClass": "deletePlayerMatch",
+			"iClass": "fas fa-trash"
+		}
+	},
+	"sub": "",
+	"order": null
+}

@@ -1,0 +1,72 @@
+{
+	"moduleName": "$Module",
+	"tag": "$module",
+	"moduleSlug": "$module",
+	"subMenu": {
+		"$module": {
+			"name": "List",
+			"classIcon": "fa fa-bars",
+			"classLink": "$module ajax-load",
+			"hidden": false,
+			"main": true
+		},
+		"add$module": {
+			"name": "Create",
+			"classIcon": "fa fa-user",
+			"classLink": "add$module",
+			"hidden": false,
+			"main": false
+		},
+		"edit$module": {
+			"name": "Edit $Module",
+			"classIcon": "fa fa-user",
+			"classLink": "edit$module",
+			"hidden": true,
+			"main": false
+		}
+	},
+	"action": {
+		"get$moduledata": {
+			"name": "Get $Module Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"add$moduledata": {
+			"name": "Add $Module Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"edit$moduledata": {
+			"name": "Edit $Module Data",
+			"action": true,
+			"page": "#edit$module",
+			"type": "btn",
+			"aClass": "edit$module",
+			"iClass": "fas fa-pen"
+		},
+		"delete$moduledata": {
+			"name": "Delete $Module Data",
+			"action": true,
+			"page": "#delete$module",
+			"type": "btn",
+			"aClass": "delete$module",
+			"iClass": "fas fa-trash"
+		},
+		"status$moduledata": {
+			"name": "Change Status $Module Data",
+			"action": true,
+			"page": "#status$module",
+			"type": "checkbox",
+			"aClass": "switch-mini showmodalstatus",
+			"iClass": "fas fa-trash-o"
+		}
+	},
+	"sub": "",
+	"order": null
+}

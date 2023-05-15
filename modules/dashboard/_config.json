@@ -1,0 +1,27 @@
+{
+	"moduleName": "dashboard",
+	"tag": "",
+	"moduleSlug": "dashboard",
+	"subMenu": {
+		"dashboard": {
+			"name": "List",
+			"classIcon": "list",
+			"classLink": " dashboard ajax-load",
+			"hidden": false,
+			"main": true
+		}
+	},
+	"action": {
+		"getDashboard": {
+			"name": "Get data dashboard",
+			"dtList": "",
+			"page": "",
+			"type": "",
+			"aClass": "",
+			"iClass": ""
+		}
+	},
+	"classIcon": "fa fa-clipboard",
+	"sub": "",
+	"order": ""
+}

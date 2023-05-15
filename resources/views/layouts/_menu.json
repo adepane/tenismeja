@@ -1,0 +1,37 @@
+{
+    "dashboard": {
+        "slug": "dashboard",
+        "name": "Dashboard",
+        "icon": "fa-home",
+        "sub": false,
+        "order": 0
+    },
+    "playerMatch": {
+        "slug": "playerMatch",
+        "name": "Matchs",
+        "icon": "fa-ellipsis-h",
+        "sub": false,
+        "order": 88
+    },
+    "player": {
+        "slug": "player",
+        "name": "Players",
+        "icon": "fa-users",
+        "sub": false,
+        "order": 88
+    },
+    "masterdata": {
+        "slug": "masterdata",
+        "name": "Master Data",
+        "icon": "hard-drive",
+        "sub": true,
+        "order": 99
+    },
+    "setting": {
+        "slug": "setting",
+        "name": "Setting",
+        "icon": "fa-cogs",
+        "sub": true,
+        "order": 100
+    }
+}

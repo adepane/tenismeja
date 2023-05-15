@@ -1,0 +1,143 @@
+{
+	"moduleName": "User Management",
+	"tag": "Manages Users",
+	"moduleSlug": "users",
+	"subMenu": {
+		"users": {
+			"name": "List Users",
+			"classIcon": "far fa-list-alt",
+			"classLink": " users ajax-load",
+			"hidden": false,
+			"main": true
+		},
+		"adduser": {
+			"name": "Create",
+			"classIcon": "fas fa-user",
+			"classLink": "adduser",
+			"hidden": false,
+			"main": false
+		},
+		"edituser": {
+			"name": "Edit Users",
+			"classIcon": "fas fa-user",
+			"classLink": " ajax-load",
+			"hidden": true,
+			"main": false
+		},
+		"profile": {
+			"name": "Profile Users",
+			"classIcon": "fas fa-user",
+			"classLink": " editprofileuser ajax-load",
+			"hidden": true,
+			"main": false
+		},
+		"customrole": {
+			"name": "Custom Role",
+			"classIcon": "fas fa-user",
+			"classLink": "customroles",
+			"hidden": true,
+			"main": false
+		}
+	},
+	"action": {
+		"getusersdata": {
+			"name": "Get User Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"adduserdata": {
+			"name": "Add User",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"getusersinfo": {
+			"name": "User Information Ajax",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"userInfoEdit": {
+			"name": "User Information Ajax Edit Page",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		
+		"editprofiledata":{
+			"name": "Edit profile data user",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"getmodulepermission": {
+			"name": "Get Module Permission For Custom Role",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"sendcustomrole": {
+			"name": "Change Custom Role",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"loginasuser": {
+			"name": "Login as user",
+			"action": true,
+			"page": null,
+			"type": "btn",
+			"aClass": "loginasuser",
+			"iClass": "fas fa-key"
+		},
+		"editusersdata": {
+			"name": "Edit User",
+			"action": true,
+			"page": "#edituser",
+			"type": "btn",
+			"aClass": "edituser",
+			"iClass": "fas fa-pen"
+		},
+		"deleteuserdata": {
+			"name": "Delete User",
+			"action": true,
+			"page": "#deleteuserdata",
+			"type": "btn",
+			"aClass": "deleteuser",
+			"iClass": "fas fa-trash"
+		},
+		"customrole": {
+			"name": "Custome role",
+			"action": true,
+			"page": "customrole",
+			"type": "btn",
+			"aClass": "customrole",
+			"iClass": "fas fa-user-cog"
+		},
+		"statususerdata": {
+			"name": "Status User",
+			"action": true,
+			"page": null,
+			"type": "checkbox",
+			"aClass": null,
+			"iClass": null
+		}
+	},
+	"sub": "setting",
+	"order": 1
+}

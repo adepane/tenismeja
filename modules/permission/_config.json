@@ -1,0 +1,72 @@
+{
+	"moduleName": "Permissions",
+	"tag": "Manages Permissions",
+	"moduleSlug": "permission",
+	"subMenu": {
+		"permission": {
+			"name": "List",
+			"classIcon": "fa fa-bars",
+			"classLink": "permission ajax-load",
+			"hidden": false,
+			"main": true
+		},
+		"addpermission": {
+			"name": "Create",
+			"classIcon": "fa fa-user",
+			"classLink": "addpermission",
+			"hidden": false,
+			"main": false
+		},
+		"editpermission": {
+			"name": "Edit Permission",
+			"classIcon": "fa fa-user",
+			"classLink": "editpermission",
+			"hidden": true,
+			"main": false
+		}
+	},
+	"action": {
+		"getpermissiondata": {
+			"name": "Get Permission Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"addpermissiondata": {
+			"name": "Add",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"editpermissiondata": {
+			"name": "Edit",
+			"action": true,
+			"page": "#editpermission",
+			"type": "btn",
+			"aClass": "editpermission",
+			"iClass": "fas fa-pen"
+		},
+		"deletepermissiondata": {
+			"name": "Delete",
+			"action": true,
+			"page": "#deletepermission",
+			"type": "btn",
+			"aClass": "deletepermission",
+			"iClass": "fas fa-trash"
+		},
+		"statuspermissiondata": {
+			"name": "Change Status",
+			"action": true,
+			"page": "#statuspermission",
+			"type": "checkbox",
+			"aClass": "switch-mini showmodalstatus",
+			"iClass": "fas fa-trash-o"
+		}
+	},
+	"sub": "setting",
+	"order": 2
+}
