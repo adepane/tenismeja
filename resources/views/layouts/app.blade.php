@@ -381,6 +381,9 @@
                         return data.value && Swal.fire("Error!", error, "error");
                     });			
                     await table.ajax.reload(null, false);
+                    setTimeout(() => {
+                        location.reload();
+                    }, 3000);
                 }
             });
         }

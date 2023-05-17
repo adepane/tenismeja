@@ -1,1 +1,1 @@
-this is dashboard
+Welcome Back, {!! Auth::user()->name !!}

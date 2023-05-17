@@ -20,11 +20,11 @@
         "sub": false,
         "order": 88
     },
-    "masterdata": {
-        "slug": "masterdata",
-        "name": "Master Data",
-        "icon": "hard-drive",
-        "sub": true,
+    "externalPoint": {
+        "slug": "externalPoint",
+        "name": "Leg-1 Data",
+        "icon": "fa-map-pin",
+        "sub": false,
         "order": 99
     },
     "setting": {

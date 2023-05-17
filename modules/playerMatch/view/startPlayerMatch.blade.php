@@ -116,8 +116,5 @@ $(document).on('click','.finishMatch',function (e) {
 	e.stopPropagation();
 	e.stopImmediatePropagation();
 	customModalData("Are you sure to Finish this Match?","","question",$(this).data('match'), "{{Core::api('PlayerMatch/finishTheMatch')}}");
-	setTimeout(() => {
-		location.reload();
-	}, 3000);
 });
 </script>

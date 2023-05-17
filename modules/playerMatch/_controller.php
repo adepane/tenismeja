@@ -37,11 +37,12 @@ class PlayerMatchController extends Core
                 $x->where('away_id', $awayId)->orWhere('home_id',$awayId);
             }
         })
+        ->with(['getMatchSets'])
         ->orderBy('id', 'asc');
 
         return Datatables::of($dataGet)
         ->editColumn('finish', function($dataGet) {
-            return ($dataGet->finish) ? 'Finish' : '-';
+            return ($dataGet->finish) ? '<span class="text-success">Finish</span>' : (($dataGet->getMatchSets->count() > 0) ? '<span class="text-warning">On Event</span>' : 'Not Start');
         })
         ->editColumn('home_id', function($dataGet){
             $winner = ($dataGet->home_score > $dataGet->away_score) ? "<i class='fas fa-trophy text-success'></i>" : "";
@@ -61,7 +62,7 @@ class PlayerMatchController extends Core
             $PlayerMatchValue = '{"id":"'.$dataGet->id.'"}#{"id":""}#{"id":""}';
             return Core::getactiondt('PlayerMatch', $PlayerMatchValue);
         })
-        ->rawColumns(['action', 'home_id', 'away_id'])
+        ->rawColumns(['action', 'home_id', 'away_id', 'finish'])
         ->make();
     }
 
