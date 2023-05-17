@@ -8,7 +8,10 @@ class PlayerController extends Core
 {
     public function getPlayerData()
     {
-        $dataGet = Player::select(['id', 'name'])->orderBy('id', 'asc')->get();
+        
+
+        $dataGet = Player::select(['id', 'name', 'total_point'])
+        ->orderBy('id', 'asc');
 
         return Datatables::of($dataGet)
         ->addColumn('action', function ($dataGet) {

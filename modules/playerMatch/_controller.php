@@ -11,7 +11,32 @@ class PlayerMatchController extends Core
 {
     public function getPlayerMatchData()
     {
+        $formId = request('cari');
+        $homeId = null;
+        $awayId = null;
+
+        if (!empty($formId)) {
+            foreach ($formId as $value) {
+                if ($value['name'] == "_home_id") {
+                    $homeId = ($value['value'] != null) ? $value['value'] : null;
+                }
+                if ($value['name'] == "_away_id") {
+                    $awayId = ($value['value'] != null) ? $value['value'] : null;
+                }
+            }
+        }
+
         $dataGet = PlayerMatch::select(['id', 'home_id', 'away_id', 'finish', 'home_score', 'away_score'])
+        ->where(function ($x) use ($homeId) {
+            if ($homeId != null) {
+                $x->where('home_id', $homeId)->orWhere('away_id',$homeId);
+            }
+        })
+        ->where(function ($x) use ($awayId) {
+            if ($awayId != null) {
+                $x->where('away_id', $awayId)->orWhere('home_id',$awayId);
+            }
+        })
         ->orderBy('id', 'asc');
 
         return Datatables::of($dataGet)

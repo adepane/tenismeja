@@ -6,6 +6,7 @@
 					<thead>
 						<tr>
 							<th>Name</th>
+							<th>Points</th>
 							<th>Action</th>
 						</tr>
 					</thead>
@@ -27,6 +28,7 @@ jQuery(function() {
 		},
 		"columns": [
 			{ "width": "*","data":"name","className": "dt-left" },
+			{ "width": "*","data":"total_point","className": "dt-left" },
 			{ "width": "16%","data":"action","className": "dt-center", "sortable": false }
 		],
 		dom:
