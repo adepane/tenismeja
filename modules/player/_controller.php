@@ -10,7 +10,7 @@ class PlayerController extends Core
     {
         
 
-        $dataGet = Player::select(['id', 'name', 'total_point'])
+        $dataGet = Player::select(['id', 'name', 'total_point', 'l1_pts'])
         ->orderBy('id', 'asc');
 
         return Datatables::of($dataGet)
@@ -26,6 +26,7 @@ class PlayerController extends Core
     {
         $modul = new Player;
         $modul->name = request('name');
+        $modul->l1_pts = request('l1_pts');
         if ($modul->save()) {
             return Core::createReturn(true, $modul, 'Data Added Successfully');
         } else {
@@ -37,6 +38,7 @@ class PlayerController extends Core
     {
         $modul = Player::find(request('playerId'));
         $modul->name = request('name');
+        $modul->l1_pts = request('l1_pts');
         if ($modul->update()) {
             return Core::createReturn(true, $modul, 'Data Updated Successfully');
         } else {

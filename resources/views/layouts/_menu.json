@@ -20,13 +20,6 @@
         "sub": false,
         "order": 88
     },
-    "externalPoint": {
-        "slug": "externalPoint",
-        "name": "Leg-1 Data",
-        "icon": "fa-map-pin",
-        "sub": false,
-        "order": 99
-    },
     "setting": {
         "slug": "setting",
         "name": "Setting",

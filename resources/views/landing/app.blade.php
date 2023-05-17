@@ -176,70 +176,40 @@
             <!-- Content / End -->
             <!-- Footer ================================================== -->
             <footer id="footer" class="footer">
-                <!-- Footer Widgets -->
-                <div class="footer-widgets">
-                    <div class="footer-widgets__inner">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="footer-col-inner">
-                                        <!-- Footer Logo -->
-                                        <div class="footer-logo footer-logo--has-txt">
-                                            <a href="index.html">
-                                                <img src="/guest/assets/images/soccer/logo-footer.png" srcset="/guest/assets/images/soccer/logo-footer@2x.png 2x" alt="The Alchemists" class="footer-logo__img" />
-                                                <div class="footer-logo__heading">
-                                                    <h5 class="footer-logo__txt">The Alchemists</h5>
-                                                    <span class="footer-logo__tagline">Elric Bros School</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <!-- Footer Logo / End --><!-- Widget: Contact Info -->
-                                        <div class="widget widget--footer widget-contact-info">
-                                            <div class="widget__content">
-                                                <div class="widget-contact-info__desc">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur cing elit, sed do eiusmod tempor incididunt uten labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                                </div>
-                                                <div class="widget-contact-info__body info-block">
-                                                    <div class="info-block__item">
-                                                        <svg role="img" class="df-icon df-icon--soccer-ball"><use xlink:href="/guest/assets/images/icons-soccer.svg#soccer-ball" /></svg>
-                                                        <h6 class="info-block__heading">Contact Us</h6>
-                                                        <a class="info-block__link" href="mailto:tryouts@alchemists.com">tryouts@alchemists.com</a>
-                                                    </div>
-                                                    <div class="info-block__item">
-                                                        <svg role="img" class="df-icon df-icon--whistle"><use xlink:href="/guest/assets/images/icons-soccer.svg#whistle" /></svg>
-                                                        <h6 class="info-block__heading">Join Our Team!</h6>
-                                                        <a class="info-block__link" href="mailto:info@alchemists.com">info@alchemists.com</a>
-                                                    </div>
-                                                    <div class="info-block__item info-block__item--nopadding">
-                                                        <ul class="social-links">
-                                                            <li class="social-links__item">
-                                                                <a href="#" class="social-links__link"><i class="fab fa-facebook"></i> Facebook</a>
-                                                            </li>
-                                                            <li class="social-links__item">
-                                                                <a href="#" class="social-links__link"><i class="fab fa-twitter"></i> Twitter</a>
-                                                            </li>
-                                                            <li class="social-links__item">
-                                                                <a href="#" class="social-links__link"><i class="fab fa-instagram"></i> Instagram</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Widget: Contact Info / End -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer Widgets / End --><!-- Footer Secondary -->
+               <!-- Footer Secondary -->
                 <div class="footer-secondary">
                     <div class="container">
                         <div class="footer-secondary__inner">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <div class="footer-copyright"><a href="_soccer_index.html">The Alchemists</a> 2020 &nbsp; | &nbsp; All Rights Reserved</div>
+                                    <div class="footer-copyright"><a href="_soccer_index.html">Create with <svg style="color: white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="feather feather-coffee">
+                                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"
+                                            fill="white"></path>
+                                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"
+                                            fill="white"></path>
+                                        <line x1="6"
+                                            y1="1"
+                                            x2="6"
+                                            y2="4"></line>
+                                        <line x1="10"
+                                            y1="1"
+                                            x2="10"
+                                            y2="4"></line>
+                                        <line x1="14"
+                                            y1="1"
+                                            x2="14"
+                                            y2="4"></line>
+                                    </svg> by Ade Pane</a> {!!date('Y')!!} &nbsp; | &nbsp; All Rights Reserved</div>
                                 </div>
                             </div>
                         </div>

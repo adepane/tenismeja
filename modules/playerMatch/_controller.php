@@ -177,8 +177,12 @@ class PlayerMatchController extends Core
     {
         $modul = PlayerMatch::find(request('data'));
         $modul->finish = true;
-        $modul->home_score = $modul->getMatchSets->where('home_win', 1)->count();
-        $modul->away_score = $modul->getMatchSets->where('away_win', 1)->count();
+        $homeScore = $modul->getMatchSets->where('home_win', 1)->count();
+        $awayScore = $modul->getMatchSets->where('away_win', 1)->count();
+        $modul->home_score = $homeScore;
+        $modul->away_score = $awayScore;
+        $winner = ($homeScore > $awayScore) ? $modul->home_id : $modul->away_id;
+        $modul->winner = $winner;
         if ($modul->update()) {
             if ($modul->home_score > $modul->away_score) {
                 $thePlayer = Player::find($modul->home_id);

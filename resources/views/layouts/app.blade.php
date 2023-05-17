@@ -383,7 +383,7 @@
                     await table.ajax.reload(null, false);
                     setTimeout(() => {
                         location.reload();
-                    }, 3000);
+                    }, 1000);
                 }
             });
         }

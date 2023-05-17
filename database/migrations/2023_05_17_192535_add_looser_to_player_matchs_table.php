@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('external_points', function (Blueprint $table) {
-            $table->id();
-            $table->integer('player_id');
-            $table->integer('points')->default(0);
-            $table->timestamps();
+        Schema::table('player_matchs', function (Blueprint $table) {
+            $table->integer('loser')->default(0)->after('winner');
         });
     }
 
@@ -28,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('external_points');
+        Schema::table('player_matchs', function (Blueprint $table) {
+            $table->dropColumn('loser');
+        });
     }
 };

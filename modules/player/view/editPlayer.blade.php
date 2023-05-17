@@ -10,6 +10,13 @@
 		{{ Form::text('name',$datamodul->name,['class'=>'form-control parsley-validated','parsley-required'=>"true",'parsley-required-message'=>'important!']) }}
 	</div>
 </div>
+<div class="form-group row mb-3">
+	<div class="col-md-12">
+		{{ Form::label('Leg 1 Pts','',['class'=>'form-label']) }}
+		{{ Form::text('l1_pts',$datamodul->l1_pts,['class'=>'form-control
+		parsley-validated','parsley-required'=>"true",'parsley-required-message'=>'important!']) }}
+	</div>
+</div>
 <div class="form-group row">
 	<div class="col-md-12">
 		<div class="d-flex justify-content-end">
