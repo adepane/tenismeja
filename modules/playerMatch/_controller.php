@@ -1,24 +1,33 @@
 <?php
 
-use File;
 use Core\Core;
 use App\Models\MatchSet;
+use App\Models\Player;
 use App\Models\PlayerMatch;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\File;
 
 class PlayerMatchController extends Core
 {
     public function getPlayerMatchData()
     {
-        $dataGet = PlayerMatch::select(['id', 'home_id', 'away_id'])
+        $dataGet = PlayerMatch::select(['id', 'home_id', 'away_id', 'finish', 'home_score', 'away_score'])
         ->orderBy('id', 'asc');
 
         return Datatables::of($dataGet)
+        ->editColumn('finish', function($dataGet) {
+            return ($dataGet->finish) ? 'Finish' : '-';
+        })
         ->editColumn('home_id', function($dataGet){
-            return $dataGet->playerHome->name;
+            $winner = ($dataGet->home_score > $dataGet->away_score) ? "<i class='fas fa-trophy text-success'></i>" : "";
+            $score = ($dataGet->finish) ? ' ( '.$dataGet->home_score .' ) ' : '';
+            return $dataGet->playerHome->name . $score.' '.$winner;
         })
         ->editColumn('away_id', function($dataGet){
-            return $dataGet->playerAway->name;
+            $winner = ($dataGet->home_score < $dataGet->away_score) ? "<i class='fas fa-trophy text-success'></i>" : "";
+            $score = ($dataGet->finish) ? ' ( ' . $dataGet->away_score . ' )' : '';
+
+            return $winner.' '. $score .' '. $dataGet->playerAway->name;
         })
         ->addColumn('versus', function(){
             return 'VS';
@@ -27,7 +36,7 @@ class PlayerMatchController extends Core
             $PlayerMatchValue = '{"id":"'.$dataGet->id.'"}#{"id":""}#{"id":""}';
             return Core::getactiondt('PlayerMatch', $PlayerMatchValue);
         })
-        ->rawColumns(['action'])
+        ->rawColumns(['action', 'home_id', 'away_id'])
         ->make();
     }
 
@@ -44,18 +53,32 @@ class PlayerMatchController extends Core
 
     public function editPlayerMatchData()
     {
-        $modul = PlayerMatch::find(request('PlayerMatchId'));
-        $modul->name = request('name');
+        $modul = MatchSet::find(request('PlayerMatchId'));
+        $modul->player_match_id = request('player_match_id');
+        $modul->home_score = request('home_score');
+        $modul->away_score = request('away_score');
+        $modul->finish = 1;
+        $modul->set_of_match = request('game_set');
+        $photo = request('photo');
+        $image = str_replace('data:image/jpeg;base64,', '', $photo);
+        $image = str_replace(' ', '+', $image);
+        $imageName = rand() . '.' . 'jpeg';
+        File::put(public_path() . '/photos/' . $imageName, base64_decode($image));
+        $modul->photo = '/photos/' . $imageName;
         if ($modul->update()) {
             return Core::createReturn(true, $modul, 'Data Updated Successfully');
         } else {
-            return Core::createReturn(false, $modul, 'Data Updated Failed');
+            return Core::createReturn(false, [], 'Data Updated Failed');
         }
     }
 
     public function deletePlayerMatchData()
     {
-        $modul = PlayerMatch::find(request('data'));
+        $modul = MatchSet::find(request('data'));
+        $file = public_path($modul->photo);
+        if (file_exists($file)) {
+            File::delete($file);
+        }
         if ($modul->delete()) {
             return Core::createReturn(true, [], 'Data Deleted Successfully');
         } else {
@@ -65,14 +88,21 @@ class PlayerMatchController extends Core
 
     public function getPlayerMatchStatus()
     {
-        $dataGet = MatchSet::where('player_match_id', request('matchId'))
+        $dataGet = MatchSet::select([
+            'id',
+            'home_score',
+            'away_score',
+            'finish',
+            'set_of_match',
+            'player_match_id',
+        ])
+        ->where('player_match_id', request('matchId'))
         ->with(['getPlayerMatch', 'getPlayerMatch.playerHome', 'getPlayerMatch.playerAway'])
-        ->orderBy('id', 'asc')->get();
-        // dd($dataGet);
+        ->orderBy('set_of_match', 'asc');
 
         return Datatables::of($dataGet)
         ->addColumn('winner', function($dataGet){
-            if ($dataGet->home_score > $dataGet->away_scrore) {
+            if (bccomp($dataGet->home_score, $dataGet->away_score) == 1) {
                 return $dataGet->getPlayerMatch->playerHome->name;
             } else {
                 return $dataGet->getPlayerMatch->playerAway->name;
@@ -82,8 +112,10 @@ class PlayerMatchController extends Core
             return $dataGet->home_score .' - '.$dataGet->away_score;
         })
         ->addColumn('action', function ($dataGet) {
-            $PlayerMatchValue = '{"id":""}#{"id":"' . $dataGet->id . '"}#{"id":"' . $dataGet->id . '"}';
-            return Core::getactiondt('PlayerMatch', $PlayerMatchValue);
+            if (!$dataGet->getPlayerMatch->finish) {
+                $PlayerMatchValue = '{"id":""}#{"id":"' . $dataGet->id . '"}#{"id":"' . $dataGet->id . '"}';
+                return Core::getactiondt('PlayerMatch', $PlayerMatchValue);
+            }
         })
         ->rawColumns(['action'])
         ->make();
@@ -97,13 +129,15 @@ class PlayerMatchController extends Core
         $modul->away_score = request('away_score');
         $modul->finish = 1;
         $modul->set_of_match = request('game_set');
+        if (request('home_score') > request('away_score')) {
+            $modul->home_win = 1;
+        } else {
+            $modul->away_win = 1;
+        }
         $photo = request('photo');
         $image = str_replace('data:image/jpeg;base64,', '', $photo);
         $image = str_replace(' ', '+', $image);
-        // dd($image);
         $imageName = rand() . '.' . 'jpeg';
-        // dd($imageName);
-        // $path = $image->storeAs('photos', $imageName, 'public');
         File::put(public_path() . '/photos/' . $imageName, base64_decode($image));
         $modul->photo = '/photos/'. $imageName;
         if ($modul->save()) {
@@ -111,6 +145,28 @@ class PlayerMatchController extends Core
         } else {
             return Core::createReturn(false, [], 'Data Added Failed');
         }
+    }
+
+    public function finishTheMatch()
+    {
+        $modul = PlayerMatch::find(request('data'));
+        $modul->finish = true;
+        $modul->home_score = $modul->getMatchSets->where('home_win', 1)->count();
+        $modul->away_score = $modul->getMatchSets->where('away_win', 1)->count();
+        if ($modul->update()) {
+            if ($modul->home_score > $modul->away_score) {
+                $thePlayer = Player::find($modul->home_id);
+                $thePlayer->total_point = $thePlayer->total_point + 3;
+            } else {
+                $thePlayer = Player::find($modul->away_id);
+                $thePlayer->total_point = $thePlayer->total_point + 3;
+            }
+            $thePlayer->update();
+            return Core::createReturn(true, $modul, 'Data Updated Successfully');
+        } else {
+            return Core::createReturn(false, [], 'Data Updated Failed');
+        }
+        // dd($modul);
     }
 
 }

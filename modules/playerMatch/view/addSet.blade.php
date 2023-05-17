@@ -115,6 +115,7 @@ jQuery(function(){
 					toastr.success(response.data.message,'Success :)');
 					table.ajax.reload(null, false);
 					modalbig.modal('hide');
+                    Webcam.reset();
 				} else {
 					toastr.error(response.data.message,'Error :(');
 				}

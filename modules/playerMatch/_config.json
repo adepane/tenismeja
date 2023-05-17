@@ -30,6 +30,20 @@
 			"classLink": "startPlayerMatch",
 			"hidden": true,
 			"main": false
+		},
+		"addSet": {
+			"name": "Add Set",
+			"classIcon": "fa fa-user",
+			"classLink": "addSet",
+			"hidden": true,
+			"main": false
+		},
+		"EditSet": {
+			"name": "Edit Set",
+			"classIcon": "fa fa-user",
+			"classLink": "EditSet",
+			"hidden": true,
+			"main": false
 		}
 		
 	},
@@ -60,6 +74,14 @@
 		},
 		"addPlayerMatchSetdata": {
 			"name": "Add Player Match Set Data",
+			"action": false,
+			"page": null,
+			"type": null,
+			"aClass": null,
+			"iClass": null
+		},
+		"finishTheMatch": {
+			"name": "Finish Match",
 			"action": false,
 			"page": null,
 			"type": null,

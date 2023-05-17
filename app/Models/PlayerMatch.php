@@ -20,6 +20,9 @@ class PlayerMatch extends Model
         'id',
         'home_id',
         'away_id',
+        'home_score',
+        'away_score',
+        'finish',
     ];
 
     /**

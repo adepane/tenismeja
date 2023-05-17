@@ -344,6 +344,46 @@
                 }
             });
         }
+
+        const customModalData = async (title,text,icon,dataId, uri) => {
+            Swal.fire({ 
+                title: title, 
+                text: text, 
+                icon: icon, 
+                showCancelButton: !0, 
+                confirmButtonColor: "#34c38f", 
+                cancelButtonColor: "#f46a6a", 
+                confirmButtonText: "Yes",
+                preConfirm: (valueid) => {
+                    return dataId;
+                },
+            })
+            .then(async function(data) {
+                if (data.value) {
+                    await axios({
+                        url: uri,
+                        headers:{
+                            'Authorization':defHeader,
+                            'accept':'application/json'
+                        },
+                        data:{
+                            'data':data.value,
+                            '_token':'{{ csrf_token() }}'
+                        },
+                        method:"delete"
+                    }).then(response => {
+                        if (response.data.success) {
+                            return data.value && Swal.fire("Success!", response.data.message, "success");
+                        } else {
+                            return data.value && Swal.fire("Failed", response.data.message, "error");
+                        }
+                    }).catch(error => {
+                        return data.value && Swal.fire("Error!", error, "error");
+                    });			
+                    await table.ajax.reload(null, false);
+                }
+            });
+        }
     </script>
 </body>
 <!-- END: Body-->
