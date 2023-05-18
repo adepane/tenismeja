@@ -4,8 +4,8 @@
         .team-meta {
             padding: 15px 0;
         }
-        .table>tbody>tr>td, team-meta__name {
-            font-size: 14px!important;
+        .table>tbody>tr>td, .team-meta__name {
+            font-size: 15px!important;
         }
     </style>
 @endpush
