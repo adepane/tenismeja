@@ -42,8 +42,8 @@
     <body data-template="template-soccer">
         <div class="site-wrapper clearfix">
             <div class="site-overlay"></div>
-            <!-- Header
-		================================================== --><!-- Header Mobile -->
+            <!-- Header ================================================== -->
+        <!-- Header Mobile -->
             <div class="header-mobile clearfix" id="header-mobile">
                 <div class="header-mobile__logo">
                     <a href="{!!url('/')!!}"><img src="/guest/assets/logo-league.png" srcset="/guest/assets/logo-league.png 2x" alt="Kopi Sore League" class="header-mobile__logo-img" /></a>
