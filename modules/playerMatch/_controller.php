@@ -60,7 +60,7 @@ class PlayerMatchController extends Core
         })
         ->addColumn('action', function ($dataGet) {
             $PlayerMatchValue = '{"id":"'.$dataGet->id.'"}#{"id":""}#{"id":""}';
-            return Core::getactiondt('PlayerMatch', $PlayerMatchValue);
+            return Core::getactiondt('playerMatch', $PlayerMatchValue);
         })
         ->rawColumns(['action', 'home_id', 'away_id', 'finish'])
         ->make();
@@ -140,7 +140,7 @@ class PlayerMatchController extends Core
         ->addColumn('action', function ($dataGet) {
             if (!$dataGet->getPlayerMatch->finish) {
                 $PlayerMatchValue = '{"id":""}#{"id":"' . $dataGet->id . '"}#{"id":"' . $dataGet->id . '"}';
-                return Core::getactiondt('PlayerMatch', $PlayerMatchValue);
+                return Core::getactiondt('playerMatch', $PlayerMatchValue);
             }
         })
         ->rawColumns(['action'])
