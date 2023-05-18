@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-
+Route::get('/get/detail/game/{idGame}', [HomeController::class, 'getDetailGame']);
 Route::get('login', function () {
     return view('auth.login');
 })->name('login');

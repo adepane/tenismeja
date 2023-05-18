@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Player;
+use App\Models\MatchSet;
 use App\Models\PlayerMatch;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,19 @@ class HomeController extends Controller
 
         $lastGames = PlayerMatch::latest('updated_at')->with(['playerHome', 'playerAway'])->take(5)->get();
         return view('landing.index', ['players'=>$players, 'lastGames'=>$lastGames]);
+    }
+
+    public function getDetailGame($gameId)
+    {
+        $match = MatchSet::where('player_match_id',$gameId)->orderBy('set_of_match', 'asc')
+        ->with(['getPlayerMatch', 'getPlayerMatch.playerHome', 'getPlayerMatch.playerAway', 'getPlayerMatch.getWinner'])
+        ->get();
+        return [
+            'winner'=>$match[0]->getPlayerMatch->getWinner->name,
+            'lastUpdate'=> $match[0]->updated_at->format('l, d-m-Y'),
+            'matchs'=>$match];
+        // dd($match);
+        // dd($gameId);
     }
 
 }

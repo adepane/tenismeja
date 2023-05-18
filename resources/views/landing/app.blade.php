@@ -3,16 +3,16 @@
     <head>
         <!-- Basic Page Needs
 	================================================== -->
-        <title>Alchemists Soccer Club &amp; Sports News HTML Template - Home</title>
+        <title>Kopi Sore Lague - Al-Jannah Mosque Present</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="TenisMeja.club" />
+        <meta name="description" content="Liga Kopi Sore Al-Jannah - Perumahan Puri Tanjung Sari Kota Medan" />
         <meta name="keywords" content="tenis meja club" />
         <!-- Favicons
 	================================================== -->
-        <link rel="shortcut icon" href="/guest/assets/images/soccer/favicons/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/guest/assets/images/soccer/favicons/favicon-120.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/guest/assets/images/soccer/favicons/favicon-152.png" />
+        <link rel="shortcut icon" href="/guest/assets/favicon.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/guest/assets/favicon.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/guest/assets/favicon.png" />
         <!-- Mobile Specific Metas
 	================================================== -->
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
@@ -42,7 +42,7 @@
 		================================================== --><!-- Header Mobile -->
             <div class="header-mobile clearfix" id="header-mobile">
                 <div class="header-mobile__logo">
-                    <a href="_soccer_index.html"><img src="/guest/assets/images/soccer/logo.png" srcset="/guest/assets/images/soccer/logo@2x.png 2x" alt="Alchemists" class="header-mobile__logo-img" /></a>
+                    <a href="{!!url('/')!!}"><img src="/guest/assets/logo-league.png" srcset="/guest/assets/logo-league.png 2x" alt="Kopi Sore League" class="header-mobile__logo-img" /></a>
                 </div>
                 <div class="header-mobile__inner">
                     <a id="header-mobile__toggle" class="burger-menu-icon"><span class="burger-menu-icon__line"></span></a> <span class="header-mobile__search-icon" id="header-mobile__search-icon"></span>
@@ -69,97 +69,12 @@
                         <div class="header__primary-inner">
                             <!-- Header Logo -->
                             <div class="header-logo">
-                                <a href="_soccer_index.html"><img src="/guest/assets/images/soccer/logo.png" srcset="/guest/assets/images/soccer/logo@2x.png 2x" alt="Alchemists" class="header-logo__img" /></a>
+                                <a href="{!!url('/')!!}"><img src="/guest/assets/logo-league.png" srcset="/guest/assets/logo-league.png 2x" alt="Kopi Sore League" class="header-logo__img" /></a>
                             </div>
                             <!-- Header Logo / End --><!-- Main Navigation -->
                             <nav class="main-nav clearfix">
                                 <ul class="main-nav__list">
-                                    <li class="active"><a href="_soccer_index.html">Home</a></li>
-                                    <li class="">
-                                        <a href="#">Features</a>
-                                        <div class="main-nav__megamenu clearfix">
-                                            <ul class="col-lg-2 col-md-3 col-12 main-nav__ul">
-                                                <li class="main-nav__title">Features</li>
-                                                <li><a href="_soccer_features-shortcodes.html">Shortcodes</a></li>
-                                                <li><a href="_soccer_features-typography.html">Typography</a></li>
-                                                <li><a href="_soccer_features-widgets-blog.html">Widgets - Blog</a></li>
-                                                <li><a href="_soccer_features-widgets-shop.html">Widgets - Shop</a></li>
-                                                <li><a href="_soccer_features-widgets-sports.html">Widgets - Sports</a></li>
-                                                <li><a href="_soccer_features-404.html">404 Error Page</a></li>
-                                                <li><a href="_soccer_features-search-results.html">Search Results</a></li>
-                                                <li><a href="_soccer_page-contacts.html">Contact Us</a></li>
-                                            </ul>
-                                            <ul class="col-lg-2 col-md-3 col-12 main-nav__ul">
-                                                <li class="main-nav__title">Other Pages</li>
-                                                <li><a href="_soccer_page-sponsors.html">Sponsors</a></li>
-                                                <li><a href="_soccer_page-faqs.html">FAQs</a></li>
-                                                <li><a href="_soccer_staff-single.html">Staff Member</a></li>
-                                                <li><a href="_soccer_event-tournament.html">Tournament</a></li>
-                                                <li><a href="_soccer_shop-list.html">Shop Page</a></li>
-                                                <li><a href="_soccer_shop-cart.html">Shopping Cart</a></li>
-                                                <li><a href="_soccer_shop-wishlist.html">Wishlist</a></li>
-                                                <li><a href="_soccer_shop-checkout.html">Checkout</a></li>
-                                            </ul>
-                                            <div class="col-lg-4 col-md-3 col-12">
-                                                <div class="posts posts--simple-list posts--simple-list--lg">
-                                                    <div class="posts__item posts__item--category-1">
-                                                        <div class="posts__inner">
-                                                            <div class="posts__cat"><span class="label posts__cat-label">The Team</span></div>
-                                                            <h6 class="posts__title"><a href="#">The team is starting a new power breakfast regimen</a></h6>
-                                                            <time datetime="2017-08-23" class="posts__date">August 23rd, 2017</time>
-                                                            <div class="posts__excerpt">Lorem ipsum dolor sit amet, consectetur adipisi nel elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                                                        </div>
-                                                        <div class="posts__footer card__footer">
-                                                            <div class="post-author">
-                                                                <figure class="post-author__avatar"><img src="/guest/assets/images/samples/avatar-1.jpg" alt="Post Author Avatar" /></figure>
-                                                                <div class="post-author__info"><h4 class="post-author__name">James Spiegel</h4></div>
-                                                            </div>
-                                                            <ul class="post__meta meta">
-                                                                <li class="meta__item meta__item--likes">
-                                                                    <a href="#"><i class="meta-like meta-like--active icon-heart"></i> 530</a>
-                                                                </li>
-                                                                <li class="meta__item meta__item--comments"><a href="#">18</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-3 col-12">
-                                                <ul class="posts posts--simple-list">
-                                                    <li class="posts__item posts__item--category-1">
-                                                        <figure class="posts__thumb">
-                                                            <a href="#"><img src="/guest/assets/images/samples/post-img3-xs.jpg" alt="" /></a>
-                                                        </figure>
-                                                        <div class="posts__inner">
-                                                            <div class="posts__cat"><span class="label posts__cat-label">The Team</span></div>
-                                                            <h6 class="posts__title"><a href="#">The new eco friendly stadium won a Leafy Award in 2016</a></h6>
-                                                            <time datetime="2016-08-21" class="posts__date">August 21st, 2016</time>
-                                                        </div>
-                                                    </li>
-                                                    <li class="posts__item posts__item--category-2">
-                                                        <figure class="posts__thumb">
-                                                            <a href="#"><img src="/guest/assets/images/samples/post-img1-xs.jpg" alt="" /></a>
-                                                        </figure>
-                                                        <div class="posts__inner">
-                                                            <div class="posts__cat"><span class="label posts__cat-label">Injuries</span></div>
-                                                            <h6 class="posts__title"><a href="#">Mark Johnson has a Tibia Fracture and is gonna be out</a></h6>
-                                                            <time datetime="2016-08-23" class="posts__date">August 23rd, 2016</time>
-                                                        </div>
-                                                    </li>
-                                                    <li class="posts__item posts__item--category-1">
-                                                        <figure class="posts__thumb">
-                                                            <a href="#"><img src="/guest/assets/images/samples/post-img4-xs.jpg" alt="" /></a>
-                                                        </figure>
-                                                        <div class="posts__inner">
-                                                            <div class="posts__cat"><span class="label posts__cat-label">The Team</span></div>
-                                                            <h6 class="posts__title"><a href="#">The team is starting a new power breakfast regimen</a></h6>
-                                                            <time datetime="2016-08-21" class="posts__date">August 21st, 2016</time>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
+                                    <li class="active"><a href="{!!url('/')!!}">Home</a></li>
                                 </ul>
                                 <!-- Pushy Panel Toggle -->
                                 <a href="#" class="pushy-panel__toggle"><span class="pushy-panel__line"></span> </a>
@@ -182,7 +97,7 @@
                         <div class="footer-secondary__inner">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <div class="footer-copyright"><a href="_soccer_index.html">Create with <svg style="color: white"
+                                    <div class="footer-copyright"><a href="{!!url('/')!!}">Create with <svg style="color: white"
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="18"
                                         height="18"
@@ -229,5 +144,10 @@
         <!-- Template JS -->
         <script src="{!! asset('/guest/assets/js/init.js')!!}"></script>
         <script src="{!! asset('/guest/assets/js/custom.js')!!}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+            integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+        @stack('scripts')
     </body>
 </html>

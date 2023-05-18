@@ -27,6 +27,16 @@ class PlayerMatch extends Model
     ];
 
     /**
+     * Get the getWinner that owns the PlayerMatch
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function getWinner(): BelongsTo
+    {
+        return $this->belongsTo(Player::class, 'winner', 'id');
+    }
+
+    /**
      * Get the playerHome that owns the PlayerMatch
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
