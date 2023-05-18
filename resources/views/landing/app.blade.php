@@ -33,6 +33,9 @@
         <link href="{!! asset('/guest/assets/css/style-soccer-dark.css')!!}" rel="stylesheet" />
         <!-- Custom CSS-->
         <link href="{!! asset('/guest/assets/css/custom.css')!!}" rel="stylesheet" />
+        <meta name="theme-color" content="#1e2024"/>
+        <link rel="apple-touch-icon" href="{{ asset('/guest/assets/logo-league.png') }}">
+        <link rel="manifest" href="{{ asset('/manifest.json') }}">
     </head>
 
     <body data-template="template-soccer">
@@ -149,5 +152,13 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"></script>
         @stack('scripts')
+        <script src="{{ asset('/sw.js') }}"></script>
+        <script>
+            if (!navigator.serviceWorker.controller) {
+                navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                    console.log("Service worker has been registered for scope: " + reg.scope);
+                });
+            }
+        </script>
     </body>
 </html>

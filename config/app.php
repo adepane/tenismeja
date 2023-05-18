@@ -197,6 +197,7 @@ return [
         // Custom Service Providers
         \Core\CoreServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Ladumor\LaravelPwa\PWAServiceProvider::class,
 
     ],
 
@@ -215,6 +216,8 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Core' => Core\CoreFacades::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        'LaravelPwa' => \Ladumor\LaravelPwa\LaravelPwa::class,
+
     ])->toArray(),
 
 ];

@@ -1,0 +1,17 @@
+{
+    "name": "Kopi Sore League",
+    "short_name": "LPT",
+    "start_url": "/index.php",
+    "background_color": "#6777ef",
+    "description": "Kopi Sore League",
+    "display": "fullscreen",
+    "theme_color": "#1e2024",
+    "icons": [
+        {
+            "src": "/guest/assets/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
