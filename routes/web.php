@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/get/detail/game/{idGame}', [HomeController::class, 'getDetailGame']);
+Route::get('/get/detail/allgame/{userId}', [HomeController::class, 'getDetailUser'])->name('getDetailUser');
 Route::get('login', function () {
     return view('auth.login');
 })->name('login');
@@ -25,6 +26,7 @@ Route::get('/loginasuser', [AdminController::class, 'loginasuser']);
 Route::get('/switchback', [AdminController::class, 'returnBackUser']);
 Route::middleware(['auth', 'auth:sanctum'])->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('dash');
+    Route::get('/#/dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/{slug}', [AdminController::class, 'identify']);
     Route::get('/{slug}/{subslug}', [AdminController::class, 'identify']);
     Route::get('/{slug}/{subslug}/{data}', [AdminController::class, 'identify']);

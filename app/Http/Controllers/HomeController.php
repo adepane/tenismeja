@@ -32,4 +32,10 @@ class HomeController extends Controller
         // dd($gameId);
     }
 
+    public function getDetailUser($userId)
+    {
+        $player = Player::find($userId);
+        return view('landing.detail', ['player'=>$player]);
+    }
+
 }

@@ -4,7 +4,7 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item me-auto"><a class="navbar-brand"
-                    href="../../../html/ltr/vertical-menu-template/index.html"><span class="brand-logo">
+                    href="{!!url('/')!!}"><span class="brand-logo">
                         <svg viewbox="0 0 139 95"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"

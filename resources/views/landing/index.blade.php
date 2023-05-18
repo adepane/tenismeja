@@ -1,4 +1,11 @@
 @extends('landing.app')
+@push('style')
+    <style>
+        .team-meta {
+            padding: 15px 0;
+        }
+    </style>
+@endpush
 @section('content')
     <div class="site-content">
         <div class="container">
@@ -10,9 +17,8 @@
                     <!-- Widget: Standings -->
                     <aside class="widget card widget--sidebar widget-standings">
                         <div class="widget__title card__header card__header--has-btn">
-                            <h4>Club</h4>
-                            <a href="#"
-                                class="btn btn-default btn-outline btn-xs card-header__button">See All Stats</a>
+                            <h4>Players</h4>
+                            
                         </div>
                         <div class="widget__content card__content">
                             <div class="table-responsive">
@@ -31,10 +37,11 @@
                                         @foreach ($players as $player)
                                             
                                         <tr>
+                                            
                                             <td>
                                                 <div class="team-meta">
                                                     <div class="team-meta__info">
-                                                        <h6 class="team-meta__name">{!!$player->name!!}</h6>
+                                                        <a href="{!!route('getDetailUser', $player->id)!!}"><h6 class="team-meta__name">{!!$player->name!!}  </h6></a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -43,6 +50,7 @@
                                             <td>{!!$player->playerLost->count()!!}</td>
                                             <td>{!!$player->l1_pts!!}</td>
                                             <td>{!!$player->total_point!!}</td>
+                                            
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -151,7 +159,7 @@
                                     <div class="df-timeline__event-desc"><img src="${data.photo}" height="75px"/></div>
                                 </div>
                             </div>
-                            <div class="df-timeline__time"><h4>S${data.set_of_match}</h4></div>
+                            <div class="df-timeline__time"><h4>${data.set_of_match}</h4></div>
                         </div>
                         `;
                     });

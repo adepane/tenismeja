@@ -36,6 +36,7 @@
         <meta name="theme-color" content="#1e2024"/>
         <link rel="apple-touch-icon" href="{{ asset('/guest/assets/logo-league.png') }}">
         <link rel="manifest" href="{{ asset('/manifest.json') }}">
+        @stack('style')
     </head>
 
     <body data-template="template-soccer">
@@ -57,12 +58,13 @@
                 <div class="header__top-bar clearfix">
                     <div class="container">
                         <div class="header__top-bar-inner">
-                            <!-- Account Navigation -->
                             <ul class="nav-account">
+                                @if (Auth::check())
+                                <li class="nav-account__item"><a href="{!!route('dashboard')!!}">Dashboard</a></li>
+                                @else
                                 <li class="nav-account__item"><a href="{!!route('login')!!}">login</a></li>
-                                {{-- <li class="nav-account__item nav-account__item--logout"><a href="_soccer_shop-login.html">Logout</a></li> --}}
+                                @endif
                             </ul>
-                            <!-- Account Navigation / End -->
                         </div>
                     </div>
                 </div>
