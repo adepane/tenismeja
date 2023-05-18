@@ -6,7 +6,7 @@
     // dd($countSet);
 ?>
 
-{{ Form::open(array('url' => '/api/PlayerMatch/addPlayerMatchSetdata','class'=>'form form-horizontal
+{{ Form::open(array('url' => '/api/playerMatch/addPlayerMatchSetdata','class'=>'form form-horizontal
 parsley-validated','id'=>'fPlayerMatchSet')) }}
 <input type="hidden" name="player_match_id" value="{!!$datamodul->id!!}">
 <div class="form-group row mb-1">

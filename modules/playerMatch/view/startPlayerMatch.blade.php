@@ -57,7 +57,7 @@ jQuery(function() {
 		serverSide: true,
 		responsive: true,
 		ajax: {
-			url:'{!!url("/api/PlayerMatch/getPlayerMatchStatus")!!}',
+			url:'{!!url("/api/playerMatch/getPlayerMatchStatus")!!}',
 			headers: {'Authorization':defHeader},
             data: {
                 matchId: $('#data-match').val(),
@@ -77,7 +77,7 @@ jQuery(function() {
 				event.preventDefault();
 				event.stopPropagation();
 				event.stopImmediatePropagation();
-				updateStatus($(this),"{!!url('/api/PlayerMatch/statusPlayerMatchdata')!!}");
+				updateStatus($(this),"{!!url('/api/playerMatch/statusPlayerMatchdata')!!}");
 			});
 		}
 	});
@@ -101,20 +101,20 @@ $(document).on('click','.editPlayerMatch',function(event){
 	event.preventDefault();
 	event.stopPropagation();
 	event.stopImmediatePropagation();
-	viewTemplate("{!!Core::modal('PlayerMatch/editSet')!!}", 'Edit Data', ['PlayerMatch', 'MatchSet'], $(this).data('value'));
+	viewTemplate("{!!Core::modal('playerMatch/editSet')!!}", 'Edit Data', ['PlayerMatch', 'MatchSet'], $(this).data('value'));
 });
 
 $(document).on('click','.deletePlayerMatch',function (e) {
 	e.preventDefault();
 	e.stopPropagation();
 	e.stopImmediatePropagation();
-	deleteData($(this).data('value'), "{{Core::api('PlayerMatch/deletePlayerMatchData')}}");
+	deleteData($(this).data('value'), "{{Core::api('playerMatch/deletePlayerMatchData')}}");
 });
 
 $(document).on('click','.finishMatch',function (e) {
 	e.preventDefault();
 	e.stopPropagation();
 	e.stopImmediatePropagation();
-	customModalData("Are you sure to Finish this Match?","","question",$(this).data('match'), "{{Core::api('PlayerMatch/finishTheMatch')}}");
+	customModalData("Are you sure to Finish this Match?","","question",$(this).data('match'), "{{Core::api('playerMatch/finishTheMatch')}}");
 });
 </script>

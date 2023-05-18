@@ -2,7 +2,7 @@
 	$datamodul = $models['PlayerMatch']::find(request('data'));
 ?>
 
-{{ Form::open(['url' => '/api/PlayerMatch/editPlayerMatchdata','class'=>'form form-horizontal parsley-validated','id'=>'feditPlayerMatch']) }}
+{{ Form::open(['url' => '/api/playerMatch/editPlayerMatchdata','class'=>'form form-horizontal parsley-validated','id'=>'feditPlayerMatch']) }}
 {!! Form::hidden('PlayerMatchId', $datamodul->id, []) !!}
 <div class="form-group row mb-3">
 	<div class="col-md-12">

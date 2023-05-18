@@ -2,7 +2,7 @@
 	
 ?>
 
-{{ Form::open(array('url' => '/api/PlayerMatch/addPlayerMatchdata','class'=>'form form-horizontal parsley-validated','id'=>'fPlayerMatch')) }}
+{{ Form::open(array('url' => '/api/playerMatch/addPlayerMatchdata','class'=>'form form-horizontal parsley-validated','id'=>'fPlayerMatch')) }}
 <div class="form-group row mb-3">
 	<div class="col-md-12">
 		{{ Form::label('Name','',['class'=>'form-label']) }}

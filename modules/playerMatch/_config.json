@@ -1,7 +1,7 @@
 {
 	"moduleName": "Player Match",
-	"tag": "playerMatch",
-	"moduleSlug": "PlayerMatch",
+	"tag": "PlayerMatch",
+	"moduleSlug": "playerMatch",
 	"subMenu": {
 		"playerMatch": {
 			"name": "List",
