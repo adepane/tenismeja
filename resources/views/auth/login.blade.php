@@ -49,7 +49,7 @@
         <div class="content-body">
           <div class="auth-wrapper auth-cover">
             <div class="auth-inner row m-0">
-              <!-- Brand logo--><a class="brand-logo" href="index.html">
+              <!-- Brand logo--><a class="brand-logo" href="{!!url('/')!!}">
                 <svg viewBox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
                   <defs>
                     <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="mb-1">
                       <div class="d-flex justify-content-between">
-                        <label class="form-label" for="login-password">Password</label><a href="auth-forgot-password-cover.html"><small>Forgot Password?</small></a>
+                        <label class="form-label" for="login-password">Password</label><a href="#"><small>Forgot Password?</small></a>
                       </div>
                       <div class="input-group input-group-merge form-password-toggle">
                         <input class="form-control form-control-merge" id="login-password" type="password" name="password" placeholder="············" aria-describedby="login-password" tabindex="2"/><span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
