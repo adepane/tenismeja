@@ -49,7 +49,7 @@ jQuery(function() {
 		serverSide: true,
 		responsive: true,
 		ajax: {
-			url:'{!!url("/api/PlayerMatch/getPlayerMatchdata")!!}',
+			url:'{!!url("/api/PlayerMatch/getPlayerMatchData")!!}',
 			headers: {'Authorization':defHeader},
 			data: function(d) {
 				param = $('#filterPlayer').serializeArray();
