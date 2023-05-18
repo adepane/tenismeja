@@ -73,6 +73,9 @@ parsley-validated','id'=>'fEditPlayerMatchSet')) }}
         dest_height: 720,
         image_format: 'jpeg',
         jpeg_quality: 100,
+        constraints: {
+            facingMode: 'environment'
+        }
     });
     Webcam.attach( '#my_camera' );
     $(document).on('click', '#click-photo', function(e) {
