@@ -5,7 +5,7 @@
             padding: 15px 0;
         }
         .table>tbody>tr>td, .team-meta__name, .widget-standings .table-standings>tbody>tr>td:first-child>.team-meta:before {
-            font-size: 15px!important;
+            font-size: 16px!important;
         }
     </style>
 @endpush
