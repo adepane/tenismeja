@@ -10,13 +10,6 @@
 			"hidden": false,
 			"main": true
 		},
-		"addPlayerMatch": {
-			"name": "Create",
-			"classIcon": "fa fa-user",
-			"classLink": "addPlayerMatch",
-			"hidden": false,
-			"main": false
-		},
 		"editPlayerMatch": {
 			"name": "Edit PlayerMatch",
 			"classIcon": "fa fa-user",
