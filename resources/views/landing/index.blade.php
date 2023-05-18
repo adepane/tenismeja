@@ -4,6 +4,9 @@
         .team-meta {
             padding: 15px 0;
         }
+        .table>tbody>tr>td, team-meta__name {
+            font-size: 14px!important;
+        }
     </style>
 @endpush
 @section('content')
@@ -41,7 +44,7 @@
                                             <td>
                                                 <div class="team-meta">
                                                     <div class="team-meta__info">
-                                                        <a href="{!!route('getDetailUser', $player->id)!!}"><h6 class="team-meta__name">{!!$player->name!!}  </h6></a>
+                                                        <a href="{!!route('getDetailUser', $player->id)!!}"><h2 class="team-meta__name">{!!$player->name!!}  </h2></a>
                                                     </div>
                                                 </div>
                                             </td>
