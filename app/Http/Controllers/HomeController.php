@@ -15,7 +15,7 @@ class HomeController extends Controller
         ->with(['homeGame','awayGame','playerWin', 'playerLost'])
         ->get()->sortByDesc('total_point');
 
-        $lastGames = PlayerMatch::latest('updated_at')->with(['playerHome', 'playerAway'])->take(5)->get();
+        $lastGames = PlayerMatch::where('finish',1)->latest('updated_at')->with(['playerHome', 'playerAway'])->take(5)->get();
         return view('landing.index', ['players'=>$players, 'lastGames'=>$lastGames]);
     }
 
