@@ -49,7 +49,7 @@ jQuery(function() {
 		serverSide: true,
 		responsive: true,
 		ajax: {
-			url:'{!!url("/api/PlayerMatch/getPlayerMatchData")!!}',
+			url:'{!!url("/api/playerMatch/getPlayerMatchData")!!}',
 			headers: {'Authorization':defHeader},
 			data: function(d) {
 				param = $('#filterPlayer').serializeArray();
@@ -70,7 +70,7 @@ jQuery(function() {
 				event.preventDefault();
 				event.stopPropagation();
 				event.stopImmediatePropagation();
-				updateStatus($(this),"{!!url('/api/PlayerMatch/statusPlayerMatchdata')!!}");
+				updateStatus($(this),"{!!url('/api/playerMatch/statusPlayerMatchdata')!!}");
 			});
 		}
 	});
@@ -88,14 +88,14 @@ $(document).on('click','.addPlayerMatch',function(event){
 	event.preventDefault();
 	event.stopPropagation();
 	event.stopImmediatePropagation();
-	viewTemplate("{!!Core::modal('PlayerMatch/addPlayerMatch')!!}", 'Add New Data');
+	viewTemplate("{!!Core::modal('playerMatch/addPlayerMatch')!!}", 'Add New Data');
 });
 
 $(document).on('click','.editPlayerMatch',function(event){
 	event.preventDefault();
 	event.stopPropagation();
 	event.stopImmediatePropagation();
-	viewTemplate("{!!Core::modal('PlayerMatch/editPlayerMatch')!!}", 'Edit Data', ['PlayerMatch'], $(this).data('value'));
+	viewTemplate("{!!Core::modal('playerMatch/editPlayerMatch')!!}", 'Edit Data', ['PlayerMatch'], $(this).data('value'));
 });
 
 $(document).on('submit','#filterPlayer',function(e){
