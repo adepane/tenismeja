@@ -55,10 +55,10 @@ parsley-validated','id'=>'fPlayerMatchSet')) }}
 
 <script>
     Webcam.set({
-        width: 300,
-        height: 220,
-        dest_width: 1280,
-        dest_height: 720,
+        width: 220,
+        height: 330,
+        dest_width: 720,
+        dest_height: 1280,
         image_format: 'jpeg',
         jpeg_quality: 100,
         constraints: {
